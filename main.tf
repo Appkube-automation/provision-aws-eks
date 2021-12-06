@@ -1,7 +1,10 @@
+terraform{
+  backend s3{
+  }
+}
 provider "aws" {
   region = var.region
 }
-
 data "aws_s3_bucket_object" "clust_name" {
   bucket = "trainingusbatch"
   key    = "myapp/staging/current"
