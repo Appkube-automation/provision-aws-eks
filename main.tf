@@ -16,7 +16,7 @@ module "eks" {
   #version = "0.0.1"
   # insert the 1 required variable here
   #cluster_version = "1.20"
-  cluster_name    = "${data.aws_s3_bucket_object.clust_name.body}" #var.cluster_name
+  cluster_name    = var.cluster_name #"${data.aws_s3_bucket_object.clust_name.body}" 
   cluster_version = var.cluster_version
   #region 	  = var.region
 }
